@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/alex_brush</item>
+        <item>@font/cedarville_cursive</item>
+        <item>@font/courgette</item>
+        <item>@font/la_belle_aurore</item>
+        <item>@font/sarina</item>
+        <item>@font/satisfy</item>
+        <item>@font/vampiro_one</item>
+    </array>
+</resources>

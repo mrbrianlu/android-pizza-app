@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">PizzaOrder</string>
+    <string name="pepperoni">\n\n\n\nPepperoni</string>
+    <string name="chicken">\n\n\n\nChicken</string>
+    <string name="mushroom">\n\n\n\nMushroom</string>
+    <string name="green_pepper">\n\n\n\nGreen Pepper</string>
+    <string name="olive">\n\n\n\nOlive</string>
+    <string name="pineapple">\n\n\n\nPineapple</string>
+    <string name="small">Small $7</string>
+    <string name="large">Large $13</string>
+    <string name="medium">Medium $10</string>
+    <string name="total">Total: $0</string>
+    <string name="name">Name:</string>
+    <string name="phone">Phone:</string>
+    <string name="enter_name_hint">Enter Name</string>
+    <string name="enter_phone_number_hint">Enter Phone Number</string>
+    <string name="order_information">Order Information</string>
+    <string name="order">Order</string>
+    <string name="pizza">Pizza</string>
+    <string name="ordering">Ordering</string>
+    <string name="database">Database</string>
+    <string name="signature">Made by Brian Lu CIS4280</string>
+    <string name="select_toppings">Toppings: ($2 each)</string>
+    <string name="select_a_size">Select a size:</string>
+    <string name="sausage">\n\n\n\nSausage</string>
+    <string name="bacon">\n\n\n\nBacon</string>
+</resources>

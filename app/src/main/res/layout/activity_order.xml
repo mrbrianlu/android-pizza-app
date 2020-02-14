@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderActivity">
+
+    <RadioGroup
+        android:id="@+id/size_rdg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/small_rdo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:onClick="onRdoClicked"
+            android:text="@string/small"
+            android:textSize="18sp"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="8dp"/>
+
+        <RadioButton
+            android:id="@+id/medium_rdo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRdoClicked"
+            android:text="@string/medium"
+            android:textSize="18sp"
+            android:background="@drawable/button"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="8dp" />
+
+        <RadioButton
+            android:id="@+id/large_rdo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRdoClicked"
+            android:text="@string/large"
+            android:textSize="18sp"
+            android:background="@drawable/button"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="8dp" />
+
+    </RadioGroup>
+
+    <fragment
+        android:id="@+id/select_fragment"
+        android:name="com.example.pizzaorder.SelectFragment"
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/initTotal_txv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/total"
+        android:textSize="25sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/next_btn"
+        app:layout_constraintEnd_toStartOf="@+id/next_btn"
+        app:layout_constraintHorizontal_bias="0.213"
+        app:layout_constraintStart_toStartOf="@+id/guideline7" />
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/button"
+        android:onClick="next"
+        android:text="Next"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/guideline9" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="335dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="50dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="50dp" />
+
+    <ImageView
+        android:id="@+id/crustImg"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        app:srcCompat="@drawable/crust"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/size_rdg"/>
+
+    <ImageView
+        android:id="@+id/cheeseImg"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        app:srcCompat="@drawable/cheese_mozz"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/size_rdg"/>
+
+    <ImageView
+        android:id="@+id/pepperoniImg"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        app:srcCompat="@drawable/topping_pepperoni"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/size_rdg"/>
+
+    <ImageView
+        android:id="@+id/sausageImg"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        app:srcCompat="@drawable/topping_sausage"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/size_rdg"/>
+
+    <ImageView
+        android:id="@+id/chickenImg"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/size_rdg"
+        app:srcCompat="@drawable/topping_chicken" />
+
+    <ImageView
+        android:id="@+id/baconImg"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        app:srcCompat="@drawable/topping_bacon"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/size_rdg"/>
+
+    <ImageView
+        android:id="@+id/mushroomImg"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        app:srcCompat="@drawable/topping_mushroom"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/size_rdg"/>
+
+    <ImageView
+        android:id="@+id/grnpepperImg"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        app:srcCompat="@drawable/topping_greenpepper"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/size_rdg"/>
+
+    <ImageView
+        android:id="@+id/oliveImg"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        app:srcCompat="@drawable/topping_olive"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/size_rdg"/>
+
+    <ImageView
+        android:id="@+id/pineappleImg"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        app:srcCompat="@drawable/topping_pineapple"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/size_rdg"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="588dp" />
+
+
+</android.support.constraint.ConstraintLayout>

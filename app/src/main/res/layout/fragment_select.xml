@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".SelectFragment"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<GridLayout
+    android:columnCount="2"
+    android:rowCount="6"
+    android:alignmentMode="alignMargins"
+    android:columnOrderPreserved="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/orderPrompt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/select_toppings"
+        android:textSize="20sp" />
+
+
+    <CheckBox
+        android:id="@+id/pepperoni_chk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:button="@android:color/transparent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:onClick="onChkClicked"
+        android:text="@string/pepperoni"
+        android:textSize="20sp"
+        android:layout_gravity="center"/>
+
+    <CheckBox
+        android:id="@+id/sausage_chk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:button="@android:color/transparent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:onClick="onChkClicked"
+        android:text="@string/sausage"
+        android:textSize="20sp"
+        android:layout_gravity="center"/>
+
+    <CheckBox
+        android:id="@+id/chicken_chk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:onClick="onChkClicked"
+        android:text="@string/chicken"
+        android:textSize="20sp"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:button="@android:color/transparent"
+        android:layout_gravity="center" />
+
+    <CheckBox
+        android:id="@+id/bacon_chk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:onClick="onChkClicked"
+        android:text="@string/bacon"
+        android:textSize="20sp"
+        android:layout_row="4"
+        android:layout_column="0"
+        android:button="@android:color/transparent"
+        android:layout_gravity="center" />
+
+    <CheckBox
+        android:id="@+id/mushroom_chk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:onClick="onChkClicked"
+        android:text="@string/mushroom"
+        android:textSize="20sp"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:button="@android:color/transparent"
+        android:layout_gravity="center" />
+
+    <CheckBox
+        android:id="@+id/greenpepper_chk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:onClick="onChkClicked"
+        android:text="@string/green_pepper"
+        android:textSize="20sp"
+        android:layout_row="2"
+        android:layout_column="1"
+        android:button="@android:color/transparent"
+        android:layout_gravity="center" />
+
+    <CheckBox
+        android:id="@+id/olive_chk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:onClick="onChkClicked"
+        android:text="@string/olive"
+        android:textSize="20sp"
+        android:layout_row="3"
+        android:layout_column="1"
+        android:button="@android:color/transparent"
+        android:layout_gravity="center" />
+
+    <CheckBox
+        android:id="@+id/pineapple_chk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:onClick="onChkClicked"
+        android:text="@string/pineapple"
+        android:textSize="20sp"
+        android:layout_row="4"
+        android:layout_column="1"
+        android:button="@android:color/transparent"
+        android:layout_gravity="center" />
+
+    <ImageView
+    android:id="@+id/pepperoniIcon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_row="1"
+    android:layout_column="0"
+    android:src="@drawable/icon_pepperoni"
+    android:layout_gravity="center"/>
+
+    <ImageView
+        android:id="@+id/sausageIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:src="@drawable/icon_sausage"
+        android:layout_gravity="center" />
+
+    <ImageView
+        android:id="@+id/chickenIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:src="@drawable/icon_chicken"
+        android:layout_gravity="center" />
+
+    <ImageView
+        android:id="@+id/baconIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="4"
+        android:layout_column="0"
+        android:src="@drawable/icon_bacon"
+        android:layout_gravity="center" />
+
+    <ImageView
+        android:id="@+id/mushroomIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:src="@drawable/icon_mushroom"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:id="@+id/grnpepperIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="2"
+        android:layout_column="1"
+        android:src="@drawable/icon_grnpepper"
+        android:layout_gravity="center" />
+
+    <ImageView
+        android:id="@+id/oliveIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_column="1"
+        android:src="@drawable/icon_olive"
+        android:layout_gravity="center" />
+
+    <ImageView
+        android:id="@+id/pineappleIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="4"
+        android:layout_column="1"
+        android:src="@drawable/icon_pineapple"
+        android:layout_gravity="center" />
+
+</GridLayout>
+
+</ScrollView>
